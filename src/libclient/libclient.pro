@@ -1,8 +1,8 @@
 TEMPLATE = lib
 TARGET = glimpse
 
-QT -= gui
-QT += network concurrent
+#QT -= gui
+QT += network concurrent gui
 
 CONFIG += hide_symbols
 
@@ -174,7 +174,10 @@ SOURCES +=  \
     measurement/wifilookup/wifilookup_plugin.cpp \
     storage/storage.cpp \
     timing/timer.cpp \
-    measurement/upnp/upnp_definition.cpp
+    measurement/upnp/upnp_definition.cpp \
+    measurement/upnpSniffer/UPnPHandler.cpp \
+    measurement/upnpSniffer/parser.cpp \
+#    measurement/upnpSniffer/xmlInfoFromVlc.xml
 
 HEADERS += \
     export.h \
@@ -273,7 +276,9 @@ HEADERS += \
     ident.h \
     storage/storage.h \
     timing/timer.h \
-    measurement/upnp/upnp_definition.h
+    measurement/upnp/upnp_definition.h \
+    measurement/upnpSniffer/UPnPHandler.h \
+    measurement/upnpSniffer/parser.h \
 
 OTHER_FILES += \
     libclient.pri
