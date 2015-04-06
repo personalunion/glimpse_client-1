@@ -278,7 +278,11 @@ HEADERS += \
     timing/timer.h \
     measurement/upnp/upnp_definition.h \
     measurement/upnpSniffer/UPnPHandler.h \
-    measurement/upnpSniffer/parser.h \
+    measurement/upnpSniffer/parser.h
 
 OTHER_FILES += \
-    libclient.pri
+    libclient.pri \
+    measurement/upnpSniffer/soapData.xml
+
+RESOURCES += \
+    measurement/upnpSniffer/soap.qrc
